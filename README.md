@@ -4,6 +4,14 @@ This script converts the [Four Arabic Dialects POS tagged Dataset](https://githu
 
 It was used for the paper *TBD*.
 
+The resulting files have one token per line, with empty lines indicating sentence boundaries.
+Tokens are annotated like this:
+```
+form	tag	merged tag sequences (if applicable)
+```
+
+Merged tag sequences are included when the flag `--include_tag_details` is used.
+
 ## Usage
 
 ```
@@ -11,13 +19,13 @@ It was used for the paper *TBD*.
 python3 check_arabic_segmentation.py dialectal_arabic_resources/seg_plus_pos_egy.txt dialectal_arabic_resources/seg_plus_pos_lev.txt dialectal_arabic_resources/seg_plus_pos_glf.txt dialectal_arabic_resources/seg_plus_pos_mgr.txt  > arabic_preprocessing.log
 
 # The actual data conversion:
-python3 corpus_prep.py --dir dialectal_arabic_resources/ --files seg_plus_pos_egy.txt --out dev_dar-egy_UPOS.tsv
-python3 corpus_prep.py --dir dialectal_arabic_resources/ --files seg_plus_pos_glf.txt --out test_dar-glf_UPOS.tsv
-python3 corpus_prep.py --dir dialectal_arabic_resources/ --files seg_plus_pos_lev.txt --out test_dar-lev_UPOS.tsv
-python3 corpus_prep.py --dir dialectal_arabic_resources/ --files seg_plus_pos_mgr.txt --out test_dar-mgr_UPOS.tsv
+python3 convert.py --dir dialectal_arabic_resources/ --files seg_plus_pos_egy.txt --out test_dar-egy_UPOS.tsv
+python3 convert.py --dir dialectal_arabic_resources/ --files seg_plus_pos_glf.txt --out test_dar-glf_UPOS.tsv
+python3 convert.py --dir dialectal_arabic_resources/ --files seg_plus_pos_lev.txt --out test_dar-lev_UPOS.tsv
+python3 convert.py --dir dialectal_arabic_resources/ --files seg_plus_pos_mgr.txt --out test_dar-mgr_UPOS.tsv
 
 # Optional checks:
-python3 validate_converted_file.py dev_dar-egy_UPOS.tsv tagset_upos.txt
+python3 validate_converted_file.py test_dar-egy_UPOS.tsv tagset_upos.txt
 python3 validate_converted_file.py test_dar-glf_UPOS.tsv tagset_upos.txt
 python3 validate_converted_file.py test_dar-lev_UPOS.tsv tagset_upos.txt
 python3 validate_converted_file.py test_dar-mgr_UPOS.tsv tagset_upos.txt
@@ -25,7 +33,8 @@ python3 validate_converted_file.py test_dar-mgr_UPOS.tsv tagset_upos.txt
 
 ## Details
 
-(See also Appendix B of our paper *TBD*. The inverse table (sorted by UPOS tag) can also be found there.)
+See also Appendix B of our paper *TBD*. 
+The inverse table (sorted by UPOS tag) can also be found there.
 
 Relevant documentation:
 - "[Multi-Arabic POS tagging: A CRF approach](https://aclanthology.org/L18-1015/)" (Darwish ea, LREC 2018) -- the paper describing the corpus

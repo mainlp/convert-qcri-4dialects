@@ -131,7 +131,7 @@ def ara(in_file, out_file, include_tag_details=True, print_mapping=False,
                         joined_tag = tags[i]
                         sent += f"{joined_form}\t{joined_tag}"
                         if include_tag_details:
-                            sent += f"\t{cells[6]}\t{i}:{j}\n"
+                            sent += f"\t{cells[6]}\n"
                         else:
                             sent += "\n"
                         i = j
@@ -161,5 +161,7 @@ if __name__ == "__main__":
                         help="input file(s) within the data directory, "
                         "comma-separated")
     parser.add_argument("--out", help="output file")
+    parser.add_argument("--include_tag_details", default=False,
+                        action="store_true")
     args = parser.parse_args()
-    ara(args.dir + "/" + args.files, args.out)
+    ara(args.dir + "/" + args.files, args.out, args.include_tag_details)
