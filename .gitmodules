@@ -1,0 +1,3 @@
+[submodule "dialectal_arabic_resources"]
+	path = dialectal_arabic_resources
+	url = git@github.com:qcri/dialectal_arabic_resources.git
