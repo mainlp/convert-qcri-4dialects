@@ -2,7 +2,7 @@
 
 This script converts the [Four Arabic Dialects POS tagged Dataset](https://github.com/qcri/dialectal_arabic_resources) ([released under the Apache License 2.0](https://alt.qcri.org/resources/da_resources/); article: [Darwish ea 2018](https://aclanthology.org/L18-1015/)) to [UPOS](https://universaldependencies.org/u/pos/) tags.
 
-It was used for the paper *TBD*.
+It was used for the paper *Does manipulating tokenization aid cross-lingual transfer? A study on POS tagging for non-standardized languages* (Blaschke ea, VarDial 2023, link to come).
 
 The resulting files have one token per line, with empty lines indicating sentence boundaries.
 Tokens are annotated like this:
@@ -37,10 +37,10 @@ See also Appendix B of our paper *TBD*.
 The inverse table (sorted by UPOS tag) can also be found there.
 
 Relevant documentation:
-- "[Multi-Arabic POS tagging: A CRF approach](https://aclanthology.org/L18-1015/)" (Darwish ea, LREC 2018) -- the paper describing the corpus
-- "[Using stem-templates to improve Arabic POS and gender/number tagging](https://aclanthology.org/L14-1296/)"" (Darwish ea, LREC 2014) -- information on the *Farasa* tagset on which the corpus's tagset is based
-- the corpus description pages for [Arabic treebanks](https://universaldependencies.org/ar/index.html) in general and for [UD Arabic PADT](https://universaldependencies.org/treebanks/ar_padt/) in particular
-- "[Treebanking user-generated content: a UD based overview of guidelines, corpora and unified recommendations](https://link.springer.com/article/10.1007/s10579-022-09581-9)" (Sanguinetti ea, LRE 2022)
+- [Multi-Arabic POS tagging: A CRF approach](https://aclanthology.org/L18-1015/) (Darwish ea, LREC 2018) -- the paper describing the corpus
+- [Using stem-templates to improve Arabic POS and gender/number tagging](https://aclanthology.org/L14-1296/) (Darwish ea, LREC 2014) -- information on the *Farasa* tagset on which the corpus's tagset is based
+- The corpus description pages for [Arabic treebanks](https://universaldependencies.org/ar/index.html) in general and for [UD Arabic PADT](https://universaldependencies.org/treebanks/ar_padt/) in particular
+- [Treebanking user-generated content: a UD based overview of guidelines, corpora and unified recommendations](https://link.springer.com/article/10.1007/s10579-022-09581-9) (Sanguinetti ea, LRE 2022)
 - [Arabic Dialects Segmentation Guidelines](https://alt.qcri.org/wp-content/uploads/2020/08/seg-guidelines.pdf) -- the guidelines according to which the corpus was originally segmented
 - "A reference grammar of Modern Standard Arabic" (Ryding 2005, Cambridge University Press)
 - "The syntax of spoken Arabic" (Brustad 2000, Georgetown University Press)
