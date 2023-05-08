@@ -2,7 +2,7 @@
 
 This script converts the [Four Arabic Dialects POS tagged Dataset](https://github.com/qcri/dialectal_arabic_resources) ([released under the Apache License 2.0](https://alt.qcri.org/resources/da_resources/); article: [Darwish ea 2018](https://aclanthology.org/L18-1015/)) to [UPOS](https://universaldependencies.org/u/pos/) tags.
 
-It was used for the paper *Does manipulating tokenization aid cross-lingual transfer? A study on POS tagging for non-standardized languages* (Blaschke ea, VarDial 2023, link to come).
+It was used for the paper *Does manipulating tokenization aid cross-lingual transfer? A study on POS tagging for non-standardized languages* (Blaschke ea, VarDial 2023, [link](https://aclanthology.org/2023.vardial-1.5/)).
 
 The resulting files have one token per line, with empty lines indicating sentence boundaries.
 Tokens are annotated like this:
